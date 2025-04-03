@@ -6,7 +6,7 @@ import { icons } from '@/constants/icons'
 
 
 const MovieCard = ({id, title, poster_path, vote_average, release_date}:Movie) => {
- 
+
     return (
     <View>
 <Link href={`/movies/${id}`} asChild>
@@ -29,13 +29,13 @@ resizeMode='cover'
 <View className='flex-row items-center justify-start gap-x-1'> 
   <Image source={icons.star} className='size-4'/>
 
-   <Text className='text-white'> {Math.round(vote_average/2)} </Text>
+   <Text className='text-white'>{Math.round(vote_average/2)}</Text>
 </View>
 <View className='flex-row items-center justify-between'>
     <Text className='text-xs text-light-300 font-medium mt-1'>
         {release_date?.split('-')[0]}
     </Text>
-   <Text className='text-light-300 uppercse font-medium text-xs'>Movie</Text>
+   <Text className='text-light-300 uppercase font-medium text-xs'>Movie</Text>
 </View>
 </TouchableOpacity>
 </Link>
